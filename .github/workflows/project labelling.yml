@@ -1,18 +1,20 @@
 name: Auto-Labelling of Issues
+ 
 on:
   issues:
-    types: [opened]
-
+    types: [opened, reopened]
+ 
 permissions:
-  contents: read
   issues: write
-
+  contents: read
+ 
 jobs:
-  label_issues:
+  Labelling:
     runs-on: ubuntu-latest
     steps:
-      - name: Adding Labels
-        uses: actions/issue-labeler@v3
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/labeler.yml
+    - uses: github/issue-labeler@v3.3 
+      with:
+        configuration-path: .github/labeler.yml
+        not-before: 2024-11-22T02:00:00Z
+        enable-versioned-regex: 0
+        repo-token: ${{ github.token }}
