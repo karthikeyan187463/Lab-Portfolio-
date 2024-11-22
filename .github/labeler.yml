@@ -3,7 +3,8 @@
  
 # Label for bug-related changes
 bug:
-    - '(bug|fix)'
+    - '(bug)'
+    - '(fix)'
 enhancement:                            # Label for feature-related changes
     - '(feature|new)'
 documentation:                         # Label for doc-related changes
