@@ -1,0 +1,16 @@
+# .github/labeler.yml
+
+# Label for bug-related changes
+bug:
+  - bug
+  - fix
+# Label for document-related changes
+documentation:
+  - docs
+  - documentation
+
+# Label for enhancement-related changes
+enhancement:
+  - feature
+  - enhancement
+  
