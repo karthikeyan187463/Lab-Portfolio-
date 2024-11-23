@@ -5,9 +5,9 @@ name: Python application test suite
 
 on:
   push:
-    branches: [ "feature" ]
+    branches: [ "feature","main","develop" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "develop","feature","main" ]
 
 permissions:
   contents: read
